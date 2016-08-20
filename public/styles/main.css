@@ -1,0 +1,256 @@
+@font-face {
+    font-family:  'Chat-font';
+    src: url('FontleroyBrownNF.ttf');
+}
+
+body {
+	font-family:  'Chat-font';
+	margin: 0;
+}
+
+.full-wrapper {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	bottom: 0px;
+}
+
+.login-background {
+	background-color: #B4E4BC;
+}
+
+.login-chat-header {
+    color: rgb(35, 56, 17);
+    font-size: 48px;
+}
+
+.login-content {
+	width: 300px;
+	height: 110px;
+	padding: 5px;
+	margin: auto;
+	box-shadow: 0px 0px 9px rgba(8, 23, 1, 1);
+}
+
+.login-content input{
+    width: 75%;
+    height: 50px;
+    border: none;
+    background: white;
+    color: black;
+    line-height: 1;
+    font-size: 35px;
+    vertical-align: top;
+    font-family:'Chat-font';
+    box-shadow: 0px 0px -2px rgba(10, 47, 4, 1);
+}
+
+.login-content button {
+	width: 20%;
+	border: none;
+	height: 50px;
+	background: rgb(38, 53, 36);
+	cursor: pointer;
+	background-image: url('images/next.png');
+	background-size: 100% 100%;
+	box-shadow: 0px 0px 5px rgba(25, 18, 18, 0.7);
+}
+
+button[disabled] {
+	opacity: 0.2;
+	cursor: default;
+}
+
+.full-wrapper canvas {
+	box-shadow: 0px 0px 5px rgb(6, 39, 10);
+	background: #055D2A;
+}
+
+.strip {
+	position: fixed;
+	box-shadow: -1px 0px 25px rgba(38, 119, 18, 0.7);
+	font-size: 46px;
+	color: #061D03;
+	line-height: 1;
+	background: #C6F1DA;
+}
+.strip-1 {
+	width: 250px;
+	top: 150px;
+	height: 50px;
+}
+
+.strip-2 {
+	width: 175px;
+	top: 232px;
+	height: 50px;
+	right: 0;
+	background: #ACECB8;
+}
+
+.strip-3 {
+	width: 205px;
+	top: 425px;
+	height: 50px;
+}
+
+.strip-4 {
+	width: 250px;
+	top: 480px;
+	right: 0px;
+	height: 50px;
+	background: #ACECB8;
+}
+
+
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    box-shadow: 0px 0px 5px rgba(36, 115, 8, 0.7);
+    text-align: center;
+    color: #0B380D;
+    font-size: 38px;
+}
+
+/*
+	Chat theming starts....
+
+*/
+.fixed-top {
+	position: fixed;
+	top: 0px;
+	width: 100%;
+	height: 50px;
+	background: #ACECB8;
+	text-align: center;
+	line-height: 50px;
+	color: #9E7510;
+	font-size: 42px;
+}
+
+.fixed-bottom {
+	position: fixed;
+	bottom: 0px;
+	height: 50px;
+	width: 100%;
+	background: #ACECB8;
+}
+
+.chat-container {
+	position: fixed;
+	top: 50px;
+	bottom: 50px;
+	overflow: hidden;
+	overflow-y: auto;
+	width: 100%;
+	background-image: url('images/background.png');
+	background-size: 100% 100%;
+}
+.editor-wrapper {
+	position: absolute;
+	left: 0px;
+	right: 70px;
+	height: 50px;
+}
+
+.editor {
+	width: 100%;
+	height: 38px;
+	border: none;
+	background: white;
+	font-size: 18px;
+	margin: 6px;
+}
+
+.submit {
+	position: absolute;
+	right: 5px;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	background-size: 100% 100%;
+	border: none;
+	border-radius: 50px;
+	background-image: url('images/submit.png');
+	/* background: transparent; */
+	color: #3EDA71;
+}
+.chat-msg {
+	/* height: 40px; */
+	font-size: 30px;
+	text-align: center;
+	left: 20px;
+	right: 30px;
+	position: relative;
+	max-width: 90%;
+	margin: 8px 0px;
+}
+
+.chat-msg  .who-is{
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+    line-height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: 0px 0px 7px rgba(0,0,0,0.5);
+}
+
+.notification {
+	background: #85E6E4;
+	position: relative;
+}
+
+.current-user {
+	max-width: 50%;
+	min-width: 180px;
+	padding: 3px;
+	/* float: right; */
+	background: #6BDE6B;
+	position: relative;
+	margin-left: 50%;
+	/* vertical-align: top; */
+	border-radius: 5px;
+	text-align: left;
+}
+
+.other-user {
+    max-width: 50%;
+    min-width: 180px;
+    padding: 3px;
+    /* float: left; */
+    position: relative;
+    background: #ACB7AC;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.msg {
+    min-width: 100px;
+    max-width: 80%;
+    display: inline-block;
+    /* overflow: hidden; */
+    vertical-align: top;
+    word-break: break-all;
+    font-family: sans-serif;
+    /* font-style: normal; */
+    font-weight: lighter;
+    font-size: 18px;
+}
+
+input:focus,button:focus {
+	outline: none;
+}
+
+
+

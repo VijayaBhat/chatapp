@@ -1,0 +1,19 @@
+<div ng-controller="ChatRoomCtrl">
+	<div class="fixed-top"> 
+		{{socket.userName}}
+	</div>
+	<div class="chat-container">
+		<div ng-repeat="msg in arrMsg" class="chat-msg">
+			<div class="msg-template" ng-class="{'current-user': msg.type == 'user-message', 'other-user': msg.type == 'other-user-message', 'notification' : msg.type == 'notification'}">
+				<div ng-show="msg.user" class="who-is" ng-bind="msg.user"></div>
+				<div class="msg"> {{msg.msg}} </div>
+			</div>
+		</div>
+	</div>
+	<div class="fixed-bottom">
+		<div class="editor-wrapper">
+			<input class="editor" type="text" ng-model="currentMessage" ng-keypress="sendMessage($event)"  class="chat-editor"/>
+		</div>
+		<button class="submit" ng-disabled="!currentMessage" ng-click="sendMessage()"></button>
+	</div>
+</div>

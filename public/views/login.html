@@ -1,0 +1,15 @@
+<div class="full-wrapper login-background" ng-controller="LoginCtrl">
+	<div>
+		<canvas chat-canvas height="150" width="450"></canvas>
+	</div>
+	<div class="full-wrapper login-content">
+		<div class="login-chat-header">Welcome to Chat-Room</div>
+		<input type="text" ng-model="userName" ng-keypress="submitUserName($event)" placeholder="Enter Your Name...." />
+		<button ng-click="submitUserName()" ng-disabled="!userName"></button>
+	</div>
+	<footer>Don't Stop, Continue to Chat With Your Loving Friends</footer>
+	<div class="strip-1 strip">Sai: Hello Ram ...</div>
+	<div class="strip-2 strip">Ram: Hello...</div>
+	<div class="strip-3 strip">Sai: Waht's app,</div>
+	<div class="strip-4 strip">Ram: Nothing ra..</div>
+</div>
